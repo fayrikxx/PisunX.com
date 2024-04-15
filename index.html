@@ -13,17 +13,12 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><button id="buyNowBtn">Buy Now</button></li>
             </ul>
         </nav>
         <div class="logo">
             <img src="photos/ico.png" alt="PisunX Logo">
         </div>
     </header>
-    <!-- Кнопка на самом верху страницы для перехода на страницу покупки -->
-<div class="purchase-button">
-    <a href="purchase.html">Buy PisunX Now!</a>
-</div>
     
     <div class="container" id="home">
         <div class="content">
@@ -65,21 +60,9 @@
         </div>
     </div>
     
-    <!-- Модальное окно для ввода данных карты -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Enter Card Details</h2>
-            <form id="paymentForm">
-                <label for="cardNumber">Card Number:</label>
-                <input type="text" id="cardNumber" name="cardNumber" required><br>
-                <label for="expiryDate">Expiry Date:</label>
-                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required><br>
-                <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" name="cvv" maxlength="3" required><br>
-                <button type="submit">Pay Now</button>
-            </form>
-        </div>
+    <!-- Кнопка для перехода на страницу покупки -->
+    <div class="purchase-button">
+        <a href="purchase.html">Buy PisunX Now!</a>
     </div>
     
     <script src="script.js"></script>
