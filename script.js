@@ -1,31 +1,44 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const contentElements = document.querySelectorAll('.content');
+    // Найти кнопку "Buy Now"
+    const buyNowBtn = document.getElementById('buyNowBtn');
 
-    function showContentOnScroll() {
-        const screenPosition = window.innerHeight / 1.2;
+    // Найти модальное окно
+    const modal = document.getElementById('myModal');
 
-        contentElements.forEach(content => {
-            const contentPosition = content.getBoundingClientRect().top;
-            if (contentPosition < screenPosition) {
-                content.classList.add('show');
-            } else {
-                content.classList.remove('show');
-            }
-        });
-    }
+    // Найти элемент для закрытия модального окна
+    const closeModal = document.getElementsByClassName('close')[0];
 
-    showContentOnScroll(); // Call initially on page load
+    // Открыть модальное окно при нажатии на кнопку "Buy Now"
+    buyNowBtn.addEventListener('click', function() {
+        modal.style.display = 'block';
+    });
 
-    window.addEventListener('scroll', showContentOnScroll);
+    // Закрыть модальное окно при нажатии на крестик
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
 
-    const navLinks = document.querySelectorAll('nav ul li a');
+    // Закрыть модальное окно при клике за его пределами
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
+    // Отправка формы (для визуального эффекта)
+    const paymentForm = document.getElementById('paymentForm');
+    paymentForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Предотвратить отправку формы
+
+        // Получить значения полей формы
+        const cardNumber = document.getElementById('cardNumber').value;
+        const expiryDate = document.getElementById('expiryDate').value;
+        const cvv = document.getElementById('cvv').value;
+
+        // "Визуальная" обработка платежа (показать сообщение об успешной оплате)
+        alert(`Payment Successful!\nCard Number: ${cardNumber}\nExpiry Date: ${expiryDate}\nCVV: ${cvv}`);
+
+        // Закрыть модальное окно после "оплаты"
+        modal.style.display = 'none';
     });
 });
