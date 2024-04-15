@@ -1,0 +1,166 @@
+body {
+    background: radial-gradient(circle, #000000, #0f0c1d, #06030b);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Пример прозрачного цвета фона */
+    padding: 5px; /* Уменьшаем внутренний отступ */
+    z-index: 1000; /* Поднимаем панель навигации над остальными элементами */
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.logo {
+    flex: 0 0 auto; /* Не даем логотипу растягиваться */
+}
+
+.logo img {
+    height: 50px; /* Устанавливаем высоту иконки */
+}
+
+.author p {
+    font-size: 20px; /* Уменьшаем размер текста */
+    margin-right: 5px; /* Даем немного отступ справа */
+}
+
+.author p span {
+    color: white; /* белый цвет */
+}
+
+.author p span.x {
+    color: white; /* белый цвет */
+}
+
+
+
+
+
+.container {
+    max-width: 800px;
+    margin: 100px auto 0; /* Увеличиваем отступ сверху */
+    padding: 20px;
+    text-align: center;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(148,187,233,1) 0%, rgba(148,187,233,1) 0%, rgba(255,105,97,1) 100%); /* градиентный фон */
+    border-radius: 10px; /* закругленные углы */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* тень */
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro {
+    flex: 1;
+    text-align: left;
+    color: #f5f5dc; /* бело-бежеватый цвет */
+}
+
+.intro h2 {
+    font-size: 54px; /* увеличенный размер текста */
+}
+
+.intro p {
+    font-size: 27px; /* увеличенный размер текста */
+}
+
+.image {
+    flex: 1;
+    text-align: right;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* увеличенный размер изображения */
+}
+
+.scroll-indicator {
+    position: fixed;
+    bottom: 20px; /* Показать блок внизу страницы */
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #000, #ff69b4); /* Розовый градиент */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.spacer {
+    height: 40vh; /* Пробел на половину высоты видимой части экрана */
+}
+
+.content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.content.show {
+    opacity: 1;
+}
+#Pricing {
+    background: radial-gradient(circle, rgba(23, 140, 115, 1) 0%, rgba(0, 255, 128, 1) 100%);
+}
+#features {
+    background: radial-gradient(circle, rgba(147,144,144,1) 0%, rgba(56,56,56,1) 100%);
+    color: white; /* Устанавливаем белый цвет текста */
+}
+
+
+.scroll-behavior-smooth {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
