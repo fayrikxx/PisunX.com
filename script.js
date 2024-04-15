@@ -42,3 +42,35 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'none';
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var buyNowBtn = document.querySelector('.purchase-button a'); // Находим кнопку "Buy Now"
+    var modal = document.getElementById('myModal'); // Находим модальное окно
+    var closeModalBtn = document.querySelector('.close'); // Находим кнопку закрытия модального окна
+    var paymentForm = document.getElementById('paymentForm'); // Находим форму оплаты
+
+    // Показываем модальное окно при клике на кнопку "Buy Now"
+    buyNowBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Предотвращаем стандартное действие ссылки
+        modal.style.display = 'block'; // Показываем модальное окно
+    });
+
+    // Скрываем модальное окно при клике на кнопку закрытия
+    closeModalBtn.addEventListener('click', function() {
+        modal.style.display = 'none'; // Скрываем модальное окно
+    });
+
+    // Скрываем модальное окно при клике вне его области
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none'; // Скрываем модальное окно
+        }
+    });
+
+    // Обработчик отправки формы оплаты (в данном случае просто выводим сообщение)
+    paymentForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Предотвращаем отправку формы (только для визуала)
+        alert('Payment submitted successfully!'); // Выводим сообщение об успешной оплате
+        modal.style.display = 'none'; // Скрываем модальное окно
+    });
+});
