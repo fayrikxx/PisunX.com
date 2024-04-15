@@ -8,59 +8,53 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav role="navigation">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pricing</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Pricing">Pricing</a></li>
+                <li><a href="#features">Features</a></li>
             </ul>
         </nav>
         <div class="logo">
             <img src="photos/ico.png" alt="Логотип сайта">
         </div>
-        <nav>
-            <ul>
-                <li><a href="#features">Features</a></li> <!-- Обновлено: добавлен идентификатор раздела -->
-                <li><a href="#">Why us?</a></li>
-            </ul>
-        </nav>
     </header>
     
-    
-    <div class="container" id="home">
+    <section class="container" id="home">
         <div class="content">
             <div class="intro">
-                <h2>The Future of Roblox exploiting is here</h2>
+                <h1>The Future of Roblox exploiting is here</h1>
                 <p>PisunX - first executor that bypassed byfron</p>
             </div>
             <div class="image">
                 <img src="photos/ui.png" alt="Пример изображения">
             </div>
         </div>
-    </div>
-    <div class="spacer"></div> <!-- Добавляем дополнительный пробел -->
-    <div class="container" id="Pricing">
+    </section>
+    
+    <section class="container" id="Pricing">
         <div class="content">
             <div class="intro">
                 <h2>Pricing</h2>
-                <p>We priced our product fairly and unlike some, we don't charge $7 a week, we charge $9 a month</p>
+                <p>We price our product fairly at $9 a month.</p>
             </div>
             <div class="image">
                 <img src="photos/Sub.png" alt="Еще одно изображение">
             </div>
         </div>
-    </div>
-    <div class="spacer"></div>
-    <div class="container" id="features"> <!-- Обновлено: добавлен идентификатор раздела -->
+    </section>
+    
+    <section class="container" id="features">
         <div class="content">
             <div class="intro">
                 <h2>Features</h2>
-                <p>PisunX 2.0 offers a range of advanced features, including HWID spoofing, IP spoofing, backdoor detection*, multi-injection, automatic injection, auto-execution, and more. We have introduced a cutting-edge PRIVATE security method, ensuring near-complete anonymity (particularly effective when using Pisun X and Pisun Hub in conjunction). The development of this technology spanned approximately six months, reflecting our commitment to delivering top-tier security. </p>
+                <p>PisunX 2.0 offers advanced features like HWID spoofing, IP spoofing, backdoor detection, and more.</p>
             </div>
             <div class="image">
                 <img src="photos/chmo.png" alt="Почему мы">
             </div>
         </div>
-    </div>
+    </section>
     
     <script src="script.js"></script>
 </body>
