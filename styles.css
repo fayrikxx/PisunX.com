@@ -1,9 +1,9 @@
 body {
-    background: radial-gradient(circle, #000000, #0f0c1d, #06030b);
-    color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: radial-gradient(circle, #000000, #0f0c1d, #06030b);
+    color: white;
 }
 
 header {
@@ -14,8 +14,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
     padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
 }
 
@@ -61,10 +61,12 @@ nav ul li a:hover {
 
 h1, h2 {
     font-size: 36px;
+    margin-bottom: 10px;
 }
 
 p {
     font-size: 18px;
+    line-height: 1.6;
 }
 
 .content {
@@ -87,8 +89,4 @@ p {
     max-width: 100%;
     height: auto;
     max-height: 300px;
-}
-
-.spacer {
-    height: 40vh;
 }
