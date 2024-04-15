@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var contentElements = document.querySelectorAll('.content');
+    const contentElements = document.querySelectorAll('.content');
 
     function showContentOnScroll() {
-        var screenPosition = window.innerHeight / 1.2;
+        const screenPosition = window.innerHeight / 1.2;
 
-        contentElements.forEach(function(content) {
-            var contentPosition = content.getBoundingClientRect().top;
+        contentElements.forEach(content => {
+            const contentPosition = content.getBoundingClientRect().top;
             if (contentPosition < screenPosition) {
                 content.classList.add('show');
             } else {
@@ -17,16 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
     showContentOnScroll(); // Call initially on page load
 
     window.addEventListener('scroll', showContentOnScroll);
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-    var navLinks = document.querySelectorAll('nav ul li a');
+    const navLinks = document.querySelectorAll('nav ul li a');
 
-    navLinks.forEach(function(link) {
+    navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
-            var targetId = this.getAttribute('href').substring(1);
-            var targetSection = document.getElementById(targetId);
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
             targetSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
