@@ -14,47 +14,50 @@
     }
     .header {
       width: 100%;
-      height: 80px;
-      background-color: #ff5370; /* розовый цвет для полоски */
+      height: 80px; /* высота полосы с логотипом */
+      background-color: #ff5370;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .logo {
-      width: 100px; /* размер логотипа */
+      width: 200px;
     }
     .container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: calc(100vh - 80px); /* высота контейнера минус высота полоски */
+      height: calc(100vh - 80px); /* вычитаем высоту полосы с логотипом */
     }
     h1 {
-      color: #ff5370; /* розовый цвет для X */
+      color: white;
       text-align: center;
     }
-    .button-container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-      margin-top: 20px; /* увеличение расстояния между кнопками и надписью */
-    }
     .button {
+      display: inline-block;
       padding: 20px 40px; /* увеличение размера кнопок */
-      border: 2px solid #ff5370; /* контур кнопок */
+      margin: 10px;
+      border: 3px solid transparent; /* применение контура к кнопкам */
       border-radius: 10px; /* скругление углов кнопок */
       font-size: 24px; /* увеличение размера шрифта кнопок */
       cursor: pointer;
       transition: all 0.3s ease;
     }
+    .button-primary {
+      color: #ff5370;
+      background-color: transparent;
+    }
+    .button-discord {
+      color: #7289da;
+      background-color: transparent;
+    }
     .button:hover {
-      background-color: #ff5370; /* цвет кнопки при наведении */
-      color: white; /* цвет текста при наведении */
+      background-color: rgba(255, 255, 255, 0.3); /* изменение цвета фона при наведении */
+      border-color: #fff; /* изменение цвета контура при наведении */
     }
     .footer {
-      margin-top: 20px; /* увеличение расстояния между кнопками и нижней надписью */
+      margin-top: 20px;
       color: white;
       text-align: center;
     }
@@ -63,15 +66,13 @@
 <body>
 
 <div class="header">
-  <img src="photos/ico.png" alt="Pisun X Logo" class="logo"> <!-- замените "your_logo_url" на реальный URL вашего логотипа -->
+  <img src="your_logo_url" alt="Pisun X Logo" class="logo"> <!-- замените "your_logo_url" на реальный URL вашего логотипа -->
 </div>
 
 <div class="container">
   <h1>Pisun X</h1>
-  <div class="button-container">
-    <a href="download_link" class="button">Download</a>
-    <button onclick="redirectToDiscord()" class="button">Discord</button>
-  </div>
+  <a href="download_link" class="button button-primary">Download</a>
+  <button onclick="redirectToDiscord()" class="button button-discord">Discord</button>
 </div>
 
 <div class="footer">
