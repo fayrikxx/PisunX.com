@@ -9,9 +9,9 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #d69fa2, #9b7680); /* серо-розовый градиент */
+      background-image: url('background_image.jpg'); /* Замените 'background_image.jpg' на путь к вашему фоновому изображению */
       background-size: cover;
-      filter: blur(3px); /* размытие заднего фона */
+      background-attachment: fixed; /* Фиксированный фон */
     }
     .container {
       display: flex;
@@ -23,14 +23,19 @@
     h1 {
       color: white;
       text-align: center;
+      margin-bottom: 20px; /* Отступ от кнопок */
+    }
+    .logo {
+      width: 200px; /* Увеличиваем размер логотипа */
+      margin-bottom: 20px; /* Отступ от кнопок */
     }
     .button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 15px 30px; /* Увеличиваем размер кнопок */
       margin: 10px;
       border: none;
-      border-radius: 5px;
-      font-size: 18px;
+      border-radius: 8px; /* Увеличиваем скругление углов */
+      font-size: 20px; /* Увеличиваем размер текста кнопок */
       cursor: pointer;
       transition: all 0.3s ease;
     }
@@ -58,6 +63,7 @@
 <body>
 
 <div class="container">
+  <img src="logo.png" alt="Pisun X" class="logo"> <!-- Замените 'logo.png' на путь к вашему логотипу -->
   <h1>Pisun X</h1>
   <a href="download_link" class="button button-primary">Download</a>
   <button onclick="redirectToDiscord()" class="button button-discord">Discord</button>
