@@ -1,87 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Pisun X</title>
- <style>
-   body {
-     margin: 0;
-     padding: 0;
-     font-family: Arial, sans-serif;
-     background: linear-gradient(to bottom right, #d69fa2, #9b7680); /* серо-розовый градиент */
-     background-size: cover;
-   }
-   .header {
-     width: 100%;
-     height: 100px; /* увеличение высоты полосы с логотипом */
-     background-color: #ff5370;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-   }
-   .logo {
-     width: 300px; /* увеличение ширины логотипа */
-   }
-   .container {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     height: calc(100vh - 100px); /* вычитаем высоту полосы с логотипом */
-   }
-   h1 {
-     color: white;
-     text-align: center;
-   }
-   .button {
-     display: inline-block;
-     padding: 30px 60px; /* еще большее увеличение размера кнопок */
-     margin: 15px;
-     border: 5px solid transparent; /* увеличение толщины контура */
-     border-radius: 15px; /* большее скругление углов */
-     font-size: 30px; /* еще большее увеличение размера шрифта */
-     cursor: pointer;
-     transition: all 0.4s ease;
-   }
-   .button-primary {
-     color: #ff5370;
-     background-color: transparent;
-   }
-   .button-discord {
-     color: #7289da;
-     background-color: transparent;
-   }
-   .button:hover {
-     background-color: rgba(255, 255, 255, 0.2); /* немного более прозрачный фон при наведении */
-     border-color: #fff; /* изменение цвета контура при наведении */
-   }
-   .footer {
-     margin-top: 20px;
-     color: white;
-     text-align: center;
-   }
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pisun X</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #d69fa2, #9b7680); /* серо-розовый градиент */
+      background-size: cover;
+    }
+    .header {
+      background-color: rgba(255, 255, 255, 0.8); /* полупрозрачный белый фон для полоски с логотипом */
+      width: 100%;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo {
+      width: 100px; /* уменьшение размера логотипа */
+      margin-right: 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    h1 {
+      color: #ff5370; /* розовый цвет для X */
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      padding: 20px 40px; /* увеличение размера кнопок */
+      margin: 10px;
+      border: 3px solid transparent; /* контур кнопок */
+      border-radius: 10px; /* скругление углов кнопок */
+      font-size: 24px; /* увеличение размера шрифта кнопок */
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .button-primary {
+      color: white;
+      background-color: #ff5370;
+    }
+    .button-primary:hover {
+      background-color: #ff6b87;
+      border-color: #ff5370; /* изменение цвета контура при наведении */
+    }
+    .button-discord {
+      color: white;
+      background-color: #7289da;
+    }
+    .button-discord:hover {
+      background-color: #677bc4;
+      border-color: #7289da; /* изменение цвета контура при наведении */
+    }
+    .footer {
+      margin-top: 20px;
+      color: white;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
 <div class="header">
- <img src="photos/ico.png" alt="Pisun X Logo" class="logo"> </div>
+  <img src="your_logo_url" alt="Pisun X Logo" class="logo"> <!-- замените "your_logo_url" на реальный URL вашего логотипа -->
+</div>
 
 <div class="container">
- <h1>Pisun X</h1>
- <a href="download_link" class="button button-primary">Download</a>
- <button onclick="redirectToDiscord()" class="button button-discord">Discord</button>
+  <h1>Pisun X</h1>
+  <a href="download_link" class="button button-primary">Download</a>
+  <button onclick="redirectToDiscord()" class="button button-discord">Discord</button>
 </div>
 
 <div class="footer">
- <p>Available on: Windows 10 & 11</p>
+  <p>Available on: Windows 10 & 11</p>
 </div>
 
 <script>
- function redirectToDiscord() {
-   window.location.href = "https://discord.com/invite/your_server_code"; // Замените "your_server_code" на реальный код вашего сервера Discord
- }
+  function redirectToDiscord() {
+    window.location.href = "https://discord.com/invite/your_server_code"; // Замените "your_server_code" на реальный код вашего сервера Discord
+  }
 </script>
 
 </body>
