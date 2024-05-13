@@ -9,9 +9,8 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-image: url('background_image.jpg'); /* Замените 'background_image.jpg' на путь к вашему фоновому изображению */
+      background: linear-gradient(to bottom right, #d69fa2, #9b7680); /* серо-розовый градиент */
       background-size: cover;
-      background-attachment: fixed; /* Фиксированный фон */
     }
     .container {
       display: flex;
@@ -21,21 +20,19 @@
       height: 100vh;
     }
     h1 {
-      color: white;
+      color: #ff5370; /* розовый цвет для X */
       text-align: center;
-      margin-bottom: 20px; /* Отступ от кнопок */
     }
     .logo {
-      width: 200px; /* Увеличиваем размер логотипа */
-      margin-bottom: 20px; /* Отступ от кнопок */
+      width: 200px; /* увеличение размера логотипа */
     }
     .button {
       display: inline-block;
-      padding: 15px 30px; /* Увеличиваем размер кнопок */
+      padding: 15px 30px; /* увеличение размера кнопок */
       margin: 10px;
       border: none;
-      border-radius: 8px; /* Увеличиваем скругление углов */
-      font-size: 20px; /* Увеличиваем размер текста кнопок */
+      border-radius: 10px; /* увеличение скругления углов кнопок */
+      font-size: 20px; /* увеличение размера шрифта кнопок */
       cursor: pointer;
       transition: all 0.3s ease;
     }
@@ -54,16 +51,16 @@
       background-color: #677bc4;
     }
     .footer {
-      position: absolute;
-      bottom: 20px;
+      margin-top: 20px; /* увеличение расстояния между кнопками и нижней надписью */
       color: white;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <img src="logo.png" alt="Pisun X" class="logo"> <!-- Замените 'logo.png' на путь к вашему логотипу -->
+  <img src="photos/ico.png" alt="Pisun X Logo" class="logo"> <!-- замените "your_logo_url" на реальный URL вашего логотипа -->
   <h1>Pisun X</h1>
   <a href="download_link" class="button button-primary">Download</a>
   <button onclick="redirectToDiscord()" class="button button-discord">Discord</button>
